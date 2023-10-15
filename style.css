@@ -1,0 +1,250 @@
+.wrapper{
+    padding: 3%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(236, 211, 199);
+}
+.title{
+    font-size: 50px;
+    font-weight: bold;
+    color: rgb(77, 55, 41);
+    text-align: center;
+}
+.description{
+    font-size: 40px;
+    color: rgb(202, 139, 97);
+    text-align: center;
+}
+.choose{
+    margin-top: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.start{
+    font-size: 40px;
+    color: #312016;
+    background-color: #fffbf9;
+    width: 100px;
+    height: 50px;
+    margin-left: 20px;
+    font-weight: bold;
+    text-align: center;
+    border-radius: 10%;
+    cursor: pointer;
+}
+.score{
+    font-size: 40px;
+    color: #312016;
+    background-color: #fffbf9;
+    width: 100px;
+    height: 50px;
+    margin-left: 20px;
+    font-weight: bold;
+    text-align: center;
+    border-radius: 10%;
+    cursor: pointer;
+}
+
+.game{
+    display: none;
+    justify-self: center;
+    width: 600px;
+    height: 200px;
+    border-bottom: 2px solid #312016;
+    margin-bottom: 20%;
+}
+#coffeine{
+    width: 50px;
+    height: 50px;
+    background-image: url(assets/coffein.png);
+    background-size: 50px 50px;
+    position: relative;
+    top: 150px;
+}
+#cup{
+    width: 50px;
+    height: 50px;
+    background-image: url(assets/enemy.png);
+    background-size: 50px 50px;
+    position: relative;
+    top: 145px;
+    left: 500px;
+    animation: cupMov 2s infinite linear; /* infinite - бесконечно, linear - ускорение анимации */ 
+}
+
+@keyframes cupMov {
+    0% {
+        left: 500px; /* начальное положение */
+    }
+    100% {
+        left: -100px;
+    } 
+}
+
+.jump{
+    animation: jump 0.5s linear;
+}
+
+@keyframes jump {
+    0% {
+        top: 150px; /* начальное положение */
+    }
+    20%{
+        top: 130px;
+    }
+    40%{
+        top: 110px;
+    }
+    60%{
+        top: 90px;
+    }
+    80%{
+        top: 110px;
+    }
+    100% {
+        top: 150px;
+    } 
+}
+
+.over{
+    margin-top: 20px;
+    display: none;
+    justify-self: center;
+    align-self: center;
+    font-size: 40px;
+    color: #b12917;
+    font-weight: bold;
+    text-align: center;
+}
+
+.table{
+    display: none;
+    flex-direction: column;
+    margin-bottom: 100px;
+}
+.table_name{
+    margin-top: 20px;
+    display: flex;
+    justify-self: center;
+    align-self: center;
+    font-size: 40px;
+    color: #312016;
+    font-weight: bold;
+    text-align: center;
+}
+.best{
+    font-size: 25px;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 30px;
+    
+}
+.your_name{
+    margin-top: 20px;
+    display: flex;
+    justify-self: center;
+    align-self: center;
+    font-size: 30px;
+    color: #312016;
+    font-weight: bold;
+    text-align: center;
+    
+}
+
+
+.footer{
+    margin-top: 10px;
+    padding-left: 5%;
+    padding-right: 5%;
+    display: flex;
+    justify-content: space-between;
+    color: black;
+    font-size: 20px;
+    font-weight: bold;
+    
+    bottom: 5%;
+    height: 5%;
+    z-index: 17;
+    width: 90%;
+    align-items: center;
+}
+a{
+    text-decoration: none; 
+    color: black;
+}
+.icon{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-width: 55px; /* Минимальная ширина */
+    min-height: 40px; /* Минимальная высота */
+}
+.git{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 55px; /* Минимальная ширина */
+    height: 40px; /* Минимальная высота */
+}
+.git img{
+    width: 45px ;
+    height: 30px ;
+}
+
+/* Добавление медиа-запросов для мобильных устройств */
+@media screen and (max-width: 600px) {
+    .wrapper {
+        padding: 2%;
+    }
+    .title {
+        font-size: 40px;
+    }
+    .description {
+        font-size: 30px;
+    }
+    .choose {
+        margin-top: 30px;
+    }
+    .start, .score {
+        font-size: 30px;
+        width: 80px;
+        height: 40px;
+        margin-left: 15px;
+    }
+    .game {
+        margin-bottom: 10%;
+        width: 300px;
+        height: 200px;
+    }
+    .best {
+        font-size: 20px;
+        margin-bottom: 20px;
+    }
+    .your_name {
+        font-size: 25px;
+    }
+
+
+    
+    #coffeine{
+        width: 50px;
+        height: 50px;
+        background-image: url(assets/coffein.png);
+        background-size: 50px 50px;
+        position: relative;
+        top: 150px;
+    }
+    #cup{
+        width: 50px;
+        height: 50px;
+        background-image: url(assets/enemy.png);
+        background-size: 50px 50px;
+        position: relative;
+        top: 145px;
+        left: 500px;
+        animation: cupMov 2s infinite linear; /* infinite - бесконечно, linear - ускорение анимации */ 
+    }
+}
