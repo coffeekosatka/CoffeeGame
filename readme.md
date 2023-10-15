@@ -1,1 +1,1 @@
-coffeekosatka.github.io/CoffeeGame/
+https://coffeekosatka.github.io/CoffeeGame
